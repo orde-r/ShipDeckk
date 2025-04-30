@@ -1,0 +1,128 @@
+/* Services Page Specific Styles */
+
+/* Hero Section */
+.services-hero-section {
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url("../asset/services-hero.png");
+  background-size: cover;
+  background-position: center;
+  color: var(--color-white);
+  padding: 8rem 0;
+  text-align: center;
+}
+
+/* Services Overview Section */
+.services-overview {
+  padding: 5rem 0;
+  background-color: var(--color-light);
+  text-align: center;
+}
+
+.services-overview p {
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  font-size: 1.1rem;
+  color: var(--color-muted);
+}
+
+/* Services List Section */
+.services-list {
+  padding: 5rem 0;
+  background-color: var(--color-white);
+}
+
+.service-card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 4rem;
+  padding-bottom: 4rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.service-card:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.service-image {
+  flex: 1;
+  min-width: 300px;
+  margin-bottom: 1.5rem;
+}
+
+.service-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.service-content {
+  flex: 1;
+  min-width: 300px;
+  padding: 0 2rem;
+}
+
+.service-content h3 {
+  color: var(--color-primary);
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.service-features {
+  margin: 1.5rem 0;
+}
+
+.service-features li {
+  margin-bottom: 0.8rem;
+  position: relative;
+  padding-left: 1.8rem;
+}
+
+.service-features li::before {
+  content: "✔";
+  color: var(--color-primary);
+  position: absolute;
+  left: 0;
+}
+
+.service-cta {
+  margin-top: 1.5rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .service-card {
+    flex-direction: column;
+  }
+  
+  .service-card:nth-child(even) .service-image {
+    order: -1;
+  }
+  
+  .service-content {
+    padding: 2rem 0 0 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .service-content,
+  .service-image {
+    min-width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .services-hero-section {
+    padding: 6rem 0;
+  }
+  
+  .service-features li {
+    font-size: 0.95rem;
+  }
+}

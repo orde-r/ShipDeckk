@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery - ShipDecKK</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../home/styles.css" />
+    <link rel="stylesheet" href="gallery.css" />
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="container">
+        <div class="header-content">
+          <div class="logo">
+            <a href="../home/index.html">ShipDecKK</a>
+          </div>
+
+          <!-- Mobile menu button -->
+          <div class="mobile-nav">
+            <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </button>
+          </div>
+
+          <nav class="main-nav">
+            <ul class="nav-links">
+              <li><a href="../home/index.html" class="nav-link">Home</a></li>
+              <li>
+                <a href="gallery.html" class="nav-link active">Gallery</a>
+              </li>
+              <li>
+                <a href="../services/services.html" class="nav-link"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a href="../about/about.html" class="nav-link">About Us</a>
+              </li>
+              <li>
+                <a href="../subscribe.html" class="nav-link cta-button"
+                  >Subscribe</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Gallery Header Section -->
+      <section class="gallery-header">
+        <div class="container">
+          <h1 class="page-title">Our Ship Gallery</h1>
+          <p class="gallery-intro">
+            Explore our exclusive collection of meticulously crafted vessels
+            designed for various maritime needs. From luxurious private yachts
+            to powerful cargo ships and elegant cruise liners, discover your
+            perfect vessel.
+          </p>
+        </div>
+      </section>
+
+      <!-- Gallery Navigation Tabs -->
+      <section class="gallery-tabs">
+        <div class="container">
+          <div class="tabs-container">
+            <button class="tab-btn active" data-tab="luxury-yachts">
+              Luxury Yachts
+            </button>
+            <button class="tab-btn" data-tab="cargo-ships">Cargo Ships</button>
+            <button class="tab-btn" data-tab="luxury-liners">
+              Luxury Liners
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Gallery Content -->
+      <section class="gallery-content">
+        <div class="container">
+          <!-- Luxury Yachts Tab Content -->
+          <div class="tab-content active" id="luxury-yachts">
+            <h2 class="category-title">Luxury Yachts</h2>
+            <p class="category-description">
+              Experience unparalleled luxury and freedom on the open waters with
+              our exquisite yacht collection. Each vessel combines elegant
+              design, superior craftsmanship, and state-of-the-art technologies.
+            </p>
+
+            <div class="ships-container">
+              <!-- Yacht 1 -->
+              <div class="ship-card">
+                <div class="ship-image">
+                  <img src="/api/placeholder/500/300" alt="Azure Dream Yacht" />
+                </div>
+                <div class="ship-details">
+                  <h3 class="ship-name">Azure Dream</h3>
+                  <div class="ship-price">$3.2 Million</div>
+                  <p class="ship-description">
+                    A 120-foot masterpiece featuring 5 luxurious cabins,
+                    expansive deck spaces, and cutting-edge navigation systems.
+                    Perfect for extended voyages with uncompromising comfort.
+                  </p>
+                  <a href="#" class="btn btn-primary ship-btn">View Details</a>
+                </div>
+              </div>
+
+              <!-- Yacht 2 -->
+              <div class="ship-card">
+                <div class="ship-image">
+                  <img
+                    src="/api/placeholder/500/300"
+                    alt="Sapphire Voyager Yacht"
+                  />
+                </div>
+                <div class="ship-details">
+                  <h3 class="ship-name">Sapphire Voyager</h3>
+                  <div class="ship-price">$4.8 Million</div>
+                  <p class="ship-description">
+                    This 145-foot beauty combines Italian design with German
+                    engineering. Features include a helipad, infinity pool, and
+                    smart home integration throughout.
+                  </p>
+                  <a href="#" class="btn btn-primary ship-btn">View Details</a>
+                </div>
+              </div>
+
+              <!-- Yacht 3 -->
+              <div class="ship-card">
+                <div class="ship-image">
+                  <img
+                    src="/api/placeholder/500/300"
+                    alt="Golden Horizon Yacht"
+                  />
+                </div>
+                <div class="ship-details">
+                  <h3 class="ship-name">Golden Horizon</h3>
+                  <div class="ship-price">$2.9 Million</div>
+                  <p class="ship-description">
+                    A compact yet luxurious 90-foot yacht with sleek lines and
+                    impressive fuel efficiency. Features 3 staterooms, a
+                    spacious salon, and cutting-edge entertainment systems.
+                  </p>
+                  <a href="#" class="btn btn-primary ship-btn">View Details</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cargo Ships Tab Content -->
+          <div class="tab-content" id="cargo-ships">
+            <h2 class="category-title">Cargo Ships</h2>
+            <p class="category-description">
+              Our cargo vessels combine strength, efficiency, and reliability.
+              Built with the latest technologies, these ships ensure your cargo
+              reaches its destination safely and on time.
+            </p>
+
+            <div class="ships-container">
+              <!-- Cargo Ship 1 -->
+              <div class="ship-card">
+                <div class="ship-image">
+                  <img
+                    src="/api/placeholder/500/300"
+                    alt="Atlas Carrier Cargo Ship"
+                  />
+                </div>
+                <div class="ship-details">
+                  <h3 class="ship-name">Atlas Carrier</h3>
+                  <div class="ship-price">$12.5 Million</div>
+                  <p class="ship-description">
+                    A versatile bulk carrier with 45,000 DWT capacity. Features
+                    advanced cargo handling systems, eco-friendly propulsion,
+                    and accommodation for up to 25 crew members.
+                  </p>
+                  <a href="#" class="btn btn-primary ship-btn">View Details</a>
+                </div>
+              </div>
+
+              <!-- Cargo Ship 2 -->
+              <div class="ship-card">
+                <div class="ship-image">
+                  <img
+                    src="/api/placeholder/500/300"
+                    alt="Pacific Express Cargo Ship"
+                  />
+                </div>
+                <div class="ship-details">
+                  <h3 class="ship-name">Pacific Express</h3>
+                  <div class="ship-price">$28.3 Million</div>
+                  <p class="ship-description">
+                    Our largest container vessel with capacity for 8,500 TEU.
+                    Equipped with state-of-the-art navigation systems and
+                    energy-efficient engines for reduced carbon footprint.
+                  </p>
+                  <a href="#" class="btn btn-primary ship-btn">View Details</a>
+                </div>
+              </div>
+
+              <!-- Cargo Ship 3 -->
+              <div class="ship-card">
+                <div class="ship-image">
+                  <img
+                    src="/api/placeholder/500/300"
+                    alt="Northern Star Cargo Ship"
+                  />
+                </div>
+                <div class="ship-details">
+                  <h3 class="ship-name">Northern Star</h3>
+                  <div class="ship-price">$18.7 Million</div>
+                  <p class="ship-description">
+                    A specialized tanker designed for petroleum products with
+                    75,000 DWT capacity. Features double-hull construction,
+                    advanced safety systems, and automated cargo operations.
+                  </p>
+                  <a href="#" class="btn btn-primary ship-btn">View Details</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Luxury Liners Tab Content -->
+          <div class="tab-content" id="luxury-liners">
+            <h2 class="category-title">Luxury Liners</h2>
+            <p class="category-description">
+              Our premium cruise ships offer unparalleled luxury for passengers
+              seeking extraordinary maritime experiences. Each vessel is a
+              floating paradise of comfort, entertainment, and world-class
+              amenities.
+            </p>
+
+            <div class="ships-container">
+              <!-- Luxury Liner 1 -->
+              <div class="ship-card">
+                <div class="ship-image">
+                  <img
+                    src="/api/placeholder/500/300"
+                    alt="Celestial Princess Cruise Ship"
+                  />
+                </div>
+                <div class="ship-details">
+                  <h3 class="ship-name">Celestial Princess</h3>
+                  <div class="ship-price">$420 Million</div>
+                  <p class="ship-description">
+                    A mid-size luxury liner accommodating 1,800 passengers with
+                    a crew of 950. Features include multiple restaurants,
+                    theaters, pools, and suites with private balconies.
+                  </p>
+                  <a href="#" class="btn btn-primary ship-btn">View Details</a>
+                </div>
+              </div>
+
+              <!-- Luxury Liner 2 -->
+              <div class="ship-card">
+                <div class="ship-image">
+                  <img
+                    src="/api/placeholder/500/300"
+                    alt="Royal Odyssey Cruise Ship"
+                  />
+                </div>
+                <div class="ship-details">
+                  <h3 class="ship-name">Royal Odyssey</h3>
+                  <div class="ship-price">$680 Million</div>
+                  <p class="ship-description">
+                    Our flagship cruise liner with capacity for 3,200
+                    passengers. Features include a water park, 15 restaurants,
+                    casino, theater complex, and revolutionary stabilization
+                    technology.
+                  </p>
+                  <a href="#" class="btn btn-primary ship-btn">View Details</a>
+                </div>
+              </div>
+
+              <!-- Luxury Liner 3 -->
+              <div class="ship-card">
+                <div class="ship-image">
+                  <img
+                    src="/api/placeholder/500/300"
+                    alt="Emerald Voyager Cruise Ship"
+                  />
+                </div>
+                <div class="ship-details">
+                  <h3 class="ship-name">Emerald Voyager</h3>
+                  <div class="ship-price">$320 Million</div>
+                  <p class="ship-description">
+                    A boutique luxury liner designed for exclusive experiences
+                    with only 600 passengers. Features all-suite accommodations,
+                    personalized service, and unique destination-focused
+                    itineraries.
+                  </p>
+                  <a href="#" class="btn btn-primary ship-btn">View Details</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="cta-section">
+        <div class="container">
+          <h2 class="section-title">Ready to Find Your Perfect Vessel?</h2>
+          <p>
+            Contact our team of maritime experts to discuss your specific
+            requirements or to schedule a viewing.
+          </p>
+          <div class="cta-buttons">
+            <a href="../services/services.html" class="btn btn-secondary"
+              >Our Services</a
+            >
+            <a href="../subscribe.html" class="btn btn-secondary"
+              >Get Updates</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="main-footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-columns">
+            <div class="footer-column">
+              <h3>Contact Us</h3>
+              <address class="contact-info">
+                <p><i class="icon-location"></i> 123 Marina Bay</p>
+                <p><i class="icon-phone"></i> +62 812 3456 7890</p>
+                <p><i class="icon-email"></i> info.shipdeck@binus.ac.id</p>
+              </address>
+            </div>
+            <div class="footer-column">
+              <h3>Quick Links</h3>
+              <ul class="footer-links">
+                <li><a href="gallery.html">Ship Gallery</a></li>
+                <li><a href="../services/services.html">Our Services</a></li>
+                <li><a href="../about/about.html">About Us</a></li>
+                <li><a href="../subscribe.html">Subscribe</a></li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <h3>Business Hours</h3>
+              <ul class="hours-list">
+                <li>Monday - Friday: 9am - 6pm</li>
+                <li>Saturday: 10am - 4pm</li>
+                <li>Sunday: Closed</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="footer-bottom">
+            <p>&copy; 2025 ShipDecKK. All rights reserved.</p>
+            <ul class="legal-links">
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of Service</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../home/script.js"></script>
+    <script src="gallery.js"></script>
+  </body>
+</html>
