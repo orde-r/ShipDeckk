@@ -1,51 +1,48 @@
-document.addEventListener('DOMContentLoaded', function() {
-  // Tab functionality
+document.addEventListener('DOMContentLoaded', () => {
+  // Get all tab buttons and corresponding content containers
   const tabButtons = document.querySelectorAll('.tab-btn');
   const tabContents = document.querySelectorAll('.tab-content');
-  
-  // Handle tab click
-  function handleTabClick(e) {
-    // Remove active class from all tabs and contents
+
+  // Activate the selected tab and its corresponding content
+  function activateTab(tabButton) {
+    // Clear existing active states
     tabButtons.forEach(btn => btn.classList.remove('active'));
     tabContents.forEach(content => content.classList.remove('active'));
-    
-    // Add active class to clicked tab and corresponding content
-    const clickedTab = e.currentTarget;
-    clickedTab.classList.add('active');
-    
-    const tabId = clickedTab.getAttribute('data-tab');
-    document.getElementById(tabId).classList.add('active');
-  }
-  
-  // Add click event to tabs
-  tabButtons.forEach(button => {
-    button.addEventListener('click', handleTabClick);
-  });
-  
-  // Handle URL hash for direct access to specific tabs
-  function handleUrlHash() {
-    const hash = window.location.hash.substring(1); // Get hash without the #
-    
-    if (hash) {
-      const targetTab = document.querySelector(`.tab-btn[data-tab="${hash}"]`);
-      if (targetTab) {
-        // Remove active class from all tabs and contents
-        tabButtons.forEach(btn => btn.classList.remove('active'));
-        tabContents.forEach(content => content.classList.remove('active'));
-        
-        // Add active class to target tab and content
-        targetTab.classList.add('active');
-        document.getElementById(hash).classList.add('active');
-        
-        // Scroll to tabs if not in view
-        targetTab.scrollIntoView({behavior: 'smooth', block: 'center'});
-      }
+
+    // Activate clicked tab
+    tabButton.classList.add('active');
+
+    // Find and activate corresponding content section
+    const targetId = tabButton.getAttribute('data-tab');
+    const targetContent = document.getElementById(targetId);
+    if (targetContent) {
+      targetContent.classList.add('active');
     }
   }
-  
-  // Check URL hash on page load
-  handleUrlHash();
-  
-  // Listen for hash changes
-  window.addEventListener('hashchange', handleUrlHash);
+
+  // Handle tab button clicks
+  tabButtons.forEach(button => {
+    button.addEventListener('click', (event) => {
+      activateTab(event.currentTarget);
+    });
+  });
+
+  // Handle tabs via URL hash (e.g. example.com#tab2)
+  function handleHashChange() {
+    const hash = window.location.hash.slice(1); // Remove the "#" symbol
+    if (!hash) return;
+
+    const matchingTab = document.querySelector(`.tab-btn[data-tab="${hash}"]`);
+    if (matchingTab) {
+      activateTab(matchingTab);
+      // Scroll into view if tab is far down the page
+      matchingTab.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  }
+
+  // Check hash on initial load
+  handleHashChange();
+
+  // React to hash changes while browsing
+  window.addEventListener('hashchange', handleHashChange);
 });

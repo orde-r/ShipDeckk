@@ -1,0 +1,257 @@
+/* Subscription Page Styles */
+
+/* Hero Section */
+.subscription-hero-section {
+  background-image: linear-gradient(
+      var(--hero-bg-overlay),
+      var(--hero-bg-overlay)
+    ),
+    url("../asset/subscribe_hero.png");
+  background-size: cover;
+  background-position: center;
+  color: var(--color-white);
+  padding: 10rem 0;
+  text-align: center;
+  position: relative;
+}
+
+
+/* Subscription Form Section */
+.subscription-section {
+  padding: 5rem 0;
+  background-color: var(--color-light);
+}
+
+.subscription-container {
+  display: flex;
+  justify-content: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.subscription-form-container {
+  width: 100%;
+  padding: 2.5rem;
+  background-color: var(--color-white);
+  border-radius: 8px;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+}
+
+.subscription-form-container h2 {
+  font-size: 1.8rem;
+  color: var(--color-primary);
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-bottom: 0.8rem;
+  text-align: center;
+}
+
+.subscription-form-container h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background-color: var(--color-primary);
+}
+
+/* Form Styles */
+.subscription-form {
+  margin-top: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group input[type="number"] {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group input[type="password"]:focus,
+.form-group input[type="number"]:focus {
+  border-color: var(--color-primary);
+  outline: none;
+}
+
+/* Password Field Styles */
+.password-container {
+  position: relative;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--color-muted);
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.password-strength {
+  margin-top: 0.8rem;
+  font-size: 0.85rem;
+}
+
+.strength-bar {
+  height: 5px;
+  background-color: #eee;
+  border-radius: 3px;
+  margin-bottom: 5px;
+}
+
+.strength-meter {
+  height: 100%;
+  width: 0;
+  border-radius: 3px;
+  transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+/* Checkbox Styles */
+.checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  margin-right: 1.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.checkbox-item input[type="checkbox"] {
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+
+.checkbox-item label {
+  margin-bottom: 0;
+  cursor: pointer;
+}
+
+.terms-group {
+  margin-top: 1rem;
+}
+
+.terms-group a {
+  color: var(--color-primary);
+}
+
+.terms-group a:hover {
+  text-decoration: underline;
+}
+
+/* Error Messages */
+.error-message {
+  color: var(--color-accent);
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+  min-height: 18px;
+}
+
+/* Submit Button */
+.submit-btn {
+  width: 100%;
+  padding: 0.9rem;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+}
+
+/* Success Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  overflow: auto;
+}
+
+.modal-content {
+  background-color: var(--color-white);
+  margin: 15% auto;
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 500px;
+  text-align: center;
+  position: relative;
+}
+
+.close-modal {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--color-muted);
+}
+
+.modal-content h2 {
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.modal-content p {
+  margin-bottom: 1.5rem;
+}
+
+.modal-btn {
+  min-width: 120px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .subscription-hero h1 {
+    font-size: 2.2rem;
+  }
+  
+  .subscription-hero p {
+    font-size: 1rem;
+  }
+  
+  .checkbox-group {
+    flex-direction: column;
+  }
+  
+  .checkbox-item {
+    margin-right: 0;
+  }
+  
+  .subscription-form-container {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .subscription-form-container h2 {
+    font-size: 1.5rem;
+  }
+}

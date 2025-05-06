@@ -3,15 +3,16 @@
 /* Hero Section */
 .services-hero-section {
   background-image: linear-gradient(
-      rgba(0, 0, 0, 0.7),
-      rgba(0, 0, 0, 0.7)
+      var(--hero-bg-overlay),
+      var(--hero-bg-overlay)
     ),
     url("../asset/services-hero.png");
   background-size: cover;
   background-position: center;
   color: var(--color-white);
-  padding: 8rem 0;
+  padding: 10rem 0;
   text-align: center;
+  position: relative;
 }
 
 /* Services Overview Section */

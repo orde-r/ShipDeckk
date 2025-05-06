@@ -9,7 +9,8 @@
   --color-white: #fff;
   --color-footer-bg: #1a1a1a;
   --color-legal-link: #999;
-  --hero-bg-overlay: rgba(0, 0, 0, 0.7);
+  --hero-bg-overlay: rgba(0, 0, 0, 0.9);
+  --home-hero-bg-overlay: rgba(0, 0, 0, 0.8);
 }
 
 /* Global */
@@ -183,8 +184,8 @@ img {
 /* Hero Section */
 .hero-section {
   background-image: linear-gradient(
-      var(--hero-bg-overlay),
-      var(--hero-bg-overlay)
+      var(--home-hero-bg-overlay),
+      var(--home-hero-bg-overlay)
     ),
     url("./asset/hero.png");
   background-size: cover;
@@ -201,15 +202,15 @@ img {
 }
 
 .hero-title {
-  font-size: 3.5rem;
+  font-size: 3.2rem;
   font-weight: 700;
   margin-bottom: 1rem;
 }
 
 .hero-subtitle {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   margin-bottom: 2rem;
-  max-width: 700px;
+  max-width: 650px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -485,7 +486,7 @@ img {
   align-items: center;
 }
 
-.contact-info p i {
+.contact-info p {
   margin-right: 0.8rem;
   color: var(--color-primary);
 }
@@ -500,6 +501,7 @@ img {
 
 .footer-links a:hover {
   color: var(--color-primary);
+  text-decoration: underline;
 }
 
 .footer-bottom {
@@ -523,6 +525,9 @@ img {
 .legal-links a:hover {
   color: var(--color-white);
 }
+
+
+
 
 /* Responsive Design */
 @media (max-width: 992px) {
@@ -556,7 +561,7 @@ img {
     position: fixed;
     top: 0;
     right: -100%;
-    width: 70%;
+    width: 58%;
     height: 100vh;
     background-color: var(--color-white);
     box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);

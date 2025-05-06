@@ -1,5 +1,20 @@
 /* Additional styles for About Us page */
 
+/* Hero Section */
+.about-hero-section {
+  background-image: linear-gradient(
+      var(--hero-bg-overlay),
+      var(--hero-bg-overlay)
+    ),
+    url("../asset/services-hero.png");
+  background-size: cover;
+  background-position: center;
+  color: var(--color-white);
+  padding: 10rem 0;
+  text-align: center;
+  position: relative;
+}
+
 /* About content styling */
 .about-container {
     max-width: 800px;
