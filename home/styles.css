@@ -10,7 +10,7 @@
   --color-footer-bg: #1a1a1a;
   --color-legal-link: #999;
   --hero-bg-overlay: rgba(0, 0, 0, 0.9);
-  --home-hero-bg-overlay: rgba(0, 0, 0, 0.8);
+  --home-hero-bg-overlay: rgba(0, 0, 0, 0.6);
 }
 
 /* Global */
@@ -29,7 +29,7 @@ body {
 
 .container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 0 auto;
   padding: 0 1.5rem;
 }
@@ -100,6 +100,8 @@ img {
   background-color: var(--color-primary);
 }
 
+
+
 /* Header */
 .main-header {
   background-color: var(--color-white);
@@ -109,16 +111,9 @@ img {
   z-index: 100;
 }
 
-.header-container {
-  width: 100%;
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
-}
-
 .header-content {
   display: flex;
-    justify-content: space-between;
+  justify-content: space-between;
   align-items: center;
   padding: 1rem 0;
 }
@@ -188,265 +183,8 @@ img {
   background-color: var(--color-text);
 }
 
-/* Hero Section */
-.hero-section {
-  background-image: linear-gradient(
-      var(--home-hero-bg-overlay),
-      var(--home-hero-bg-overlay)
-    ),
-    url("./asset/hero.png");
-  background-size: cover;
-  background-position: center;
-  color: var(--color-white);
-  padding: 10rem 0;
-  text-align: center;
-  position: relative;
-}
 
-.hero-content {
-  max-width: 800px;
-  margin: 0 auto;
-}
 
-.hero-title {
-  font-size: 3.2rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-.hero-subtitle {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-  max-width: 650px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.hero-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-}
-
-/* Overview Section */
-.overview-section {
-  padding: 5rem 0;
-  background-color: var(--color-light);
-  text-align: center;
-}
-
-.overview-section p {
-  max-width: 800px;
-  margin: 0 auto 3rem;
-  font-size: 1.1rem;
-  color: var(--color-muted);
-}
-
-.stats-container {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  gap: 2rem;
-  margin-top: 3rem;
-}
-
-.stat-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.stat-number {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: var(--color-primary);
-  margin-bottom: 0.5rem;
-}
-
-.stat-label {
-  font-size: 1.1rem;
-  color: var(--color-muted);
-}
-
-/* Ship Categories Section */
-/* Updated Ship Categories Section */
-.ship-categories {
-  padding: 5rem 0;
-  background-color: var(--color-light);
-}
-
-.categories-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 3rem;
-}
-
-.categories-grid > div {
-  margin: 1rem;
-}
-
-.category-item {
-  background-color: var(--color-white);
-  border-radius: 8px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
-  width: 320px;
-  overflow: hidden;
-  transition: transform 0.3s ease;
-}
-
-.category-item:hover {
-  transform: translateY(-5px);
-}
-
-.category-icon {
-  width: 100%;
-  height: 200px;
-  overflow: hidden;
-}
-
-.category-icon img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.category-content {
-  padding: 1.5rem;
-}
-
-.category-item h3 {
-  margin-bottom: 0.8rem;
-  color: var(--color-primary);
-  font-size: 1.4rem;
-}
-
-.category-item p {
-  color: var(--color-muted);
-  margin-bottom: 1.2rem;
-  font-size: 0.95rem;
-  line-height: 1.5;
-}
-
-.category-link {
-  color: var(--color-primary);
-  font-weight: 500;
-  position: relative;
-  padding: 0.5rem 0;
-}
-
-.category-link:hover {
-  color: var(--color-primary);
-  font-weight: 600;
-}
-
-/* Why Choose Us Section */
-.why-choose-us {
-  background-color: var(--color-white);
-  padding: 5rem 0;
-}
-
-.benefits-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 2rem;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.benefits-content {
-  flex: 1;
-  min-width: 300px;
-}
-
-.benefits-list {
-  text-align: left;
-  list-style: none;
-  font-size: 1.05rem;
-  color: var(--color-text);
-}
-
-.benefits-list li {
-  margin-bottom: 1.2rem;
-  position: relative;
-  padding-left: 2rem;
-}
-
-.benefits-list li::before {
-  content: "✔";
-  color: var(--color-primary);
-  font-weight: bold;
-  position: absolute;
-  left: 0;
-}
-
-.benefits-image {
-  flex: 1;
-  min-width: 300px;
-  display: flex;
-  justify-content: center;
-}
-
-.benefits-image img {
-  max-width: 75%;
-  height: auto;
-}
-
-/* CTA Section */
-.cta-section {
-  background-color: var(--color-primary);
-  color: var(--color-white);
-  text-align: center;
-  padding: 5rem 0;
-  position: relative;
-}
-
-.cta-section::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: linear-gradient(
-    135deg,
-    rgba(44, 111, 209, 0.8) 0%,
-    rgba(26, 92, 184, 0.9) 100%
-  );
-  z-index: 1;
-}
-
-.cta-section .container {
-  position: relative;
-  z-index: 2;
-}
-
-.cta-section .section-title {
-  color: var(--color-white);
-}
-
-.cta-section .section-title::after {
-  background-color: var(--color-white);
-}
-
-.cta-section p {
-  margin: 1rem auto 2rem;
-  max-width: 600px;
-  font-size: 1.1rem;
-}
-
-.cta-section .btn-secondary {
-  background-color: transparent;
-  color: var(--color-white);
-  border: 2px solid var(--color-white);
-}
-
-.cta-section .btn-secondary:hover {
-  background-color: var(--color-white);
-  color: var(--color-primary);
-}
 
 /* Footer */
 .main-footer {
@@ -532,6 +270,298 @@ img {
 .legal-links a:hover {
   color: var(--color-white);
 }
+
+
+
+
+/* hero */
+.home-hero-section {
+  background-image: linear-gradient(
+      var(--home-hero-bg-overlay),
+      var(--home-hero-bg-overlay)
+    ),
+    url("./asset/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  color: var(--color-white);
+  padding: 10rem 0;
+  text-align: center;
+  position: relative;
+}
+
+.other-hero-section {
+  background-image: linear-gradient(
+      var(--hero-bg-overlay),
+      var(--hero-bg-overlay)
+    ),
+    url("");
+  background-size: cover;
+  background-position: center;
+  color: var(--color-white);
+  padding: 10rem 0;
+  text-align: center;
+  position: relative;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-title {
+  font-size: 3.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+
+/* overview */
+.overview-section {
+  padding: 5rem 0;
+  background-color: var(--color-light);
+  text-align: center;
+}
+
+.overview-section p {
+  max-width: 800px;
+  margin: 0 auto 1.5rem;
+  font-size: 1.1rem;
+  color: var(--color-text);
+  line-height: 1.8;
+}
+
+.stats-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 1.1rem;
+  color: var(--color-muted);
+}
+
+
+/* Categories */
+.ship-categories {
+  padding: 5rem 0;
+  background-color: var(--color-light);
+}
+
+.categories-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.categories-grid > div {
+  margin: 1rem;
+}
+
+.category-item {
+  background-color: var(--color-white);
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+  width: 320px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.category-item:hover {
+  transform: translateY(-5px);
+}
+
+.category-icon {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.category-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.category-content {
+  padding: 1.5rem;
+}
+
+.category-item h3 {
+  margin-bottom: 0.8rem;
+  color: var(--color-primary);
+  font-size: 1.4rem;
+}
+
+.category-item p {
+  color: var(--color-muted);
+  margin-bottom: 1.2rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.category-link {
+  color: var(--color-primary);
+  font-weight: 500;
+  position: relative;
+  padding: 0.5rem 0;
+}
+
+.category-link:hover {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+
+/* why choose */
+.why-choose-us {
+  background-color: var(--color-white);
+  padding: 5rem 0;
+}
+
+.benefits-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.benefits-content {
+  flex: 1;
+  min-width: 300px;
+}
+
+.benefits-list {
+  text-align: left;
+  list-style: none;
+  font-size: 1.05rem;
+  color: var(--color-text);
+}
+
+.benefits-list li {
+  margin-bottom: 1.2rem;
+  position: relative;
+  padding-left: 2rem;
+}
+
+.benefits-list li::before {
+  content: "✔";
+  color: var(--color-primary);
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+.benefits-image {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+}
+
+.benefits-image img {
+  max-width: 75%;
+  height: auto;
+}
+
+
+
+/* cta */
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.cta-section {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  text-align: center;
+  padding: 5rem 0;
+  position: relative;
+}
+
+.cta-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    135deg,
+    rgba(44, 111, 209, 0.8) 0%,
+    rgba(26, 92, 184, 0.9) 100%
+  );
+  z-index: 1;
+}
+
+.cta-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+.cta-section .section-title {
+  color: var(--color-white);
+}
+
+.cta-section .section-title::after {
+  background-color: var(--color-white);
+}
+
+.cta-section p {
+  margin: 1rem auto 2rem;
+  max-width: 600px;
+  font-size: 1.1rem;
+}
+
+.cta-section .btn-secondary {
+  background-color: transparent;
+  color: var(--color-white);
+  border: 2px solid var(--color-white);
+}
+
+.cta-section .btn-secondary:hover {
+  background-color: var(--color-white);
+  color: var(--color-primary);
+}
+
+
 
 
 
@@ -667,5 +697,16 @@ img {
   .category-item {
     width: 100%;
     max-width: 350px;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  
+  .cta-buttons .btn {
+    width: 60%;
+    max-width: 250px;
   }
 }

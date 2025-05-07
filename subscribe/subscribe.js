@@ -47,7 +47,10 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Length check
         if (password.length >= 8) {
-            strength += 25;
+            strength += 60;
+        }
+        if (password.length >= 16) {
+            strength += 60;
         }
         
         // Contains lowercase letters
@@ -90,6 +93,9 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         // Update strength meter and text
+        if (strength >= 100) {
+            strength = 100;
+        }
         strengthMeter.style.width = strength + '%';
         
         if (strength === 0) {

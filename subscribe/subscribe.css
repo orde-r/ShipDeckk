@@ -1,4 +1,4 @@
-.subscription-hero-section {
+/* .subscription-hero-section {
   background-image: linear-gradient(
       var(--hero-bg-overlay),
       var(--hero-bg-overlay)
@@ -10,10 +10,10 @@
   padding: 10rem 0;
   text-align: center;
   position: relative;
-}
+} */
 
 
-/* Subscription Form Section */
+/* form */
 .subscription-section {
   padding: 5rem 0;
   background-color: var(--color-light);
@@ -54,7 +54,7 @@
   background-color: var(--color-primary);
 }
 
-/* Form Styles */
+/* style */
 .subscription-form {
   margin-top: 1.5rem;
 }
@@ -163,7 +163,8 @@
   text-decoration: underline;
 }
 
-/* Error Messages */
+
+/* error */
 .error-message {
   color: var(--color-accent);
   font-size: 0.85rem;
@@ -171,7 +172,7 @@
   min-height: 18px;
 }
 
-/* Submit Button */
+/* submit */
 .submit-btn {
   width: 100%;
   padding: 0.9rem;
@@ -179,7 +180,7 @@
   margin-top: 1rem;
 }
 
-/* Success Modal */
+/* succ */
 .modal {
   display: none;
   position: fixed;
@@ -224,7 +225,9 @@
   min-width: 120px;
 }
 
-/* Responsive Styles */
+
+
+/* responsive */
 @media (max-width: 768px) {
   .subscription-hero h1 {
     font-size: 2.2rem;
