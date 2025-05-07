@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Form elements
+    // form
     const subscriptionForm = document.getElementById('subscriptionForm');
     const fullNameInput = document.getElementById('fullName');
     const emailInput = document.getElementById('email');
@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const interestsCheckboxes = document.querySelectorAll('input[name="interests"]');
     const termsCheckbox = document.getElementById('termsAgree');
     
-    // Error message elements
+    // error
     const fullNameError = document.getElementById('fullNameError');
     const emailError = document.getElementById('emailError');
     const passwordError = document.getElementById('passwordError');
@@ -16,16 +16,16 @@ document.addEventListener('DOMContentLoaded', function() {
     const interestsError = document.getElementById('interestsError');
     const termsError = document.getElementById('termsError');
     
-    // Password strength elements
+    // pw
     const strengthMeter = document.getElementById('strengthMeter');
     const strengthText = document.getElementById('strengthText');
     
-    // Modal elements
+    // modal
     const successModal = document.getElementById('successModal');
     const closeModal = document.querySelector('.close-modal');
     const modalCloseBtn = document.querySelector('.modal-btn');
     
-    // Toggle password visibility
+    // pw visibility
     const togglePasswordBtn = document.getElementById('togglePassword');
     togglePasswordBtn.addEventListener('click', function() {
         if (passwordInput.type === 'password') {
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // Password strength meter
+    // pw strength
     passwordInput.addEventListener('input', checkPasswordStrength);
     
     function checkPasswordStrength() {
@@ -45,7 +45,6 @@ document.addEventListener('DOMContentLoaded', function() {
         let strength = 0;
         let feedback = '';
         
-        // Length check
         if (password.length >= 8) {
             strength += 60;
         }
@@ -53,7 +52,6 @@ document.addEventListener('DOMContentLoaded', function() {
             strength += 60;
         }
         
-        // Contains lowercase letters
         let hasLowercase = false;
         for (let i = 0; i < password.length; i++) {
             const char = password.charAt(i);
@@ -66,7 +64,6 @@ document.addEventListener('DOMContentLoaded', function() {
             strength += 25;
         }
         
-        // Contains uppercase letters
         let hasUppercase = false;
         for (let i = 0; i < password.length; i++) {
             const char = password.charAt(i);
@@ -79,7 +76,6 @@ document.addEventListener('DOMContentLoaded', function() {
             strength += 25;
         }
         
-        // Contains numbers or special characters
         const specialChars = "0123456789!@#$%^&*()_+-=[]{};\':\"\\|,.<>/?";
         let hasSpecial = false;
         for (let i = 0; i < password.length; i++) {
@@ -88,11 +84,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 break;
             }
         }
+
+
         if (hasSpecial) {
             strength += 25;
         }
-        
-        // Update strength meter and text
         if (strength >= 100) {
             strength = 100;
         }
@@ -118,16 +114,16 @@ document.addEventListener('DOMContentLoaded', function() {
         strengthText.textContent = feedback;
     }
     
-    // Form validation
+    // validate
     subscriptionForm.addEventListener('submit', function(e) {
         e.preventDefault();
         
         let isValid = true;
         
-        // Reset error messages
+        // reset error msg
         resetErrors();
         
-        // Validate full name
+        // name
         if (!fullNameInput.value.trim()) {
             showError(fullNameError, 'Please enter your full name');
             isValid = false;
@@ -136,7 +132,7 @@ document.addEventListener('DOMContentLoaded', function() {
             isValid = false;
         }
         
-        // Validate email
+        // email
         if (!emailInput.value.trim()) {
             showError(emailError, 'Please enter your email address');
             isValid = false;
@@ -145,7 +141,7 @@ document.addEventListener('DOMContentLoaded', function() {
             isValid = false;
         }
         
-        // Validate password
+        // pw
         if (!passwordInput.value) {
             showError(passwordError, 'Please create a password');
             isValid = false;
@@ -153,7 +149,7 @@ document.addEventListener('DOMContentLoaded', function() {
             showError(passwordError, 'Password must be at least 8 characters long');
             isValid = false;
         } else {
-            // Check for lowercase
+
             let hasLowercase = false;
             for (let i = 0; i < passwordInput.value.length; i++) {
                 const char = passwordInput.value.charAt(i);
@@ -163,7 +159,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
             
-            // Check for uppercase
             let hasUppercase = false;
             for (let i = 0; i < passwordInput.value.length; i++) {
                 const char = passwordInput.value.charAt(i);
@@ -173,7 +168,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
             
-            // Check for special characters or numbers
             const specialChars = "0123456789!@#$%^&*()_+-=[]{};\':\"\\|,.<>/?";
             let hasSpecial = false;
             for (let i = 0; i < passwordInput.value.length; i++) {
@@ -189,7 +183,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
         
-        // Validate age
+        // age
         if (!ageInput.value) {
             showError(ageError, 'Please enter your age');
             isValid = false;
@@ -198,7 +192,7 @@ document.addEventListener('DOMContentLoaded', function() {
             isValid = false;
         }
         
-        // Validate interests
+        // interest
         let interestSelected = false;
         interestsCheckboxes.forEach(checkbox => {
             if (checkbox.checked) {
@@ -211,28 +205,28 @@ document.addEventListener('DOMContentLoaded', function() {
             isValid = false;
         }
         
-        // Validate terms agreement
+        //  terms 
         if (!termsCheckbox.checked) {
             showError(termsError, 'You must agree to the Terms & Conditions');
             isValid = false;
         }
         
-        // If form is valid, submit
+        // is valid, submit
         if (isValid) {
-            // In a real application, you would send form data to server here
+
             console.log('Form submitted successfully');
             
-            // Show success modal
+            // success 
             successModal.style.display = 'block';
             
-            // Reset form
+            // reset 
             subscriptionForm.reset();
             strengthMeter.style.width = '0%';
             strengthText.textContent = 'Password strength';
         }
     });
     
-    // Helper functions
+    // help
     function showError(element, message) {
         element.textContent = message;
     }
@@ -246,23 +240,24 @@ document.addEventListener('DOMContentLoaded', function() {
         termsError.textContent = '';
     }
     
+    // email
     function isValidEmail(email) {
-        // Simple email validation without regex
+
         if (!email) return false;
         
-        // Check for @ symbol
+        // got @
         const atIndex = email.indexOf('@');
         if (atIndex <= 0) return false;
         
-        // Check for domain with at least one dot
+        // got dot
         const domainPart = email.substring(atIndex + 1);
         const dotIndex = domainPart.indexOf('.');
         
-        // Must have characters before and after the dot in the domain
+        // before after dot
         return dotIndex > 0 && dotIndex < domainPart.length - 1;
     }
     
-    // Modal functionality
+    // modal
     closeModal.addEventListener('click', function() {
         successModal.style.display = 'none';
     });
@@ -277,7 +272,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // Input field focus/blur effects
+    // input
     const formInputs = document.querySelectorAll('.form-group input');
     formInputs.forEach(input => {
         input.addEventListener('focus', function() {

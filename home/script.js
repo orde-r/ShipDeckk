@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Toggle mobile navigation menu
+    // toggle mobile nav
     const menuToggleButton = document.querySelector('.mobile-menu-toggle');
     const navigationMenu = document.querySelector('.main-nav');
 
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Close menu when clicking outside of it
+        // click outside close
         document.addEventListener('click', (event) => {
             const clickedOutside = !event.target.closest('.mobile-menu-toggle') && 
                                    !event.target.closest('.main-nav');
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Highlight active navigation link based on current page
+    // highlight active 
     const currentPath = window.location.pathname;
     const navLinks = document.querySelectorAll('.nav-link');
 
